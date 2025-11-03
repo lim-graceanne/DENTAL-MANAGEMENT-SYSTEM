@@ -55,7 +55,7 @@ body {
   border-radius: 15px;
   padding: 2px; /* border thickness */
   background: linear-gradient(135deg, #800000, #fde95f);
-  -webkit-mask: 
+  mask: 
     linear-gradient(#fff 0 0) content-box, 
     linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
@@ -67,7 +67,6 @@ body {
 .dark-mode .card{
   position: relative;
   border-radius: 15px;
-  padding: 2rem;
   background: #1e1e1e; 
   z-index: 1;
 }
@@ -79,7 +78,7 @@ body {
   border-radius: 15px;
   padding: 2px; /* border thickness */
   background: linear-gradient(135deg,  #800000, #fde95f);
-  -webkit-mask: 
+  mask: 
     linear-gradient(#fff 0 0) content-box, 
     linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
@@ -1075,11 +1074,12 @@ html {
                     linear-gradient(135deg, #800000, #fde95f);
   background-origin: border-box;
   background-clip: padding-box, border-box;
-  padding: 30px 25px;
+  padding: 20px 20px;
   flex: 1 1 250px;
-  max-width: 300px;
+  max-width: 350px;
   text-align: center;
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  transition: transform 0.5s ease, box-shadow 0.4s ease;
+  box-shadow: 0 0 10px rgba(30, 30, 30, 0.193)
 }
 
 .card:hover {
@@ -1097,12 +1097,13 @@ html {
 .card h4 {
   color: #800000;
   margin-bottom: 8px;
-  font-weight: 700;
+  font-weight: 800;
 }
 
 .card p {
-  font-size: 14px;
-  color: #444;
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: #800000;
 }
 
 /* ============================= */
@@ -1110,7 +1111,7 @@ html {
 .footer {
   background-color: #3b0000;
   color: #fff;
-  padding: 60px 40px;
+  padding: 20px 40px;
 }
 
 .footer-container {
@@ -1124,8 +1125,8 @@ html {
 }
 
 .footer-info {
-  flex: 1 1 300px;
-  min-width: 300px;
+  max-width: 550px;
+  padding-right: 50px;
 }
 
 .footer-header {
@@ -1214,7 +1215,7 @@ html {
 /* FOOTER NAVIGATION LINKS*/
 .footer-links {
   display: flex;
-  gap: 80px; /* reduced large gap */
+  gap: 80px;
   flex-wrap: wrap;
   justify-content: flex-start;
   flex: 1 1 400px;
@@ -1246,12 +1247,15 @@ html {
 
 .footer-column a:hover {
   color: #fde95f;
+  background: transparent;
   transform: translateX(5px);
 }
 
 .copyright {
-  font-size: 0.9rem;
+  font-size: clamp(0.8rem, 1vw, 1rem);
+  font-weight: 300;
   text-align: center;
+  flex-wrap: wrap;
   width: 100%;
   margin-top: 5px;
   margin-bottom: 5px;
@@ -1307,7 +1311,6 @@ html {
  .footer-links {
     display: flex;
     flex-direction: column;
-    align-items: center;
     gap: 25px;
   }
 
@@ -1411,7 +1414,9 @@ html {
   }
 
   .footer-links {
-    gap: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
   }
 
   .footer-text h3 {
@@ -1472,13 +1477,12 @@ html {
   }
 
   .footer {
-    padding: 40px 20px;
+    padding: 20px 20px;
   }
 
   .footer-links {
     flex-direction: column;
     align-items: center;
-    gap: 10px;
   }
 
   .footer-column {
