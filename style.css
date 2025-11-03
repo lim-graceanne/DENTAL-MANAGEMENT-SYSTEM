@@ -232,27 +232,27 @@ html {
 
 /* LOGIN BUTTON */
 .login-btn {
-  background-color: #800000;
-  color: #fff;
+  background-color: transparent;
+  color: #800000;
   border: 2px solid #800000;
 }
 
 .login-btn:hover {
-  background-color: transparent;
-  color: #800000;
+  background-color: #800000;
+  color: #fff;
   transform: scale(1.08);
 }
 
 /* SIGN UP BUTTON */
 .signup-btn {
-  background-color: transparent;
-  color: #800000;
+  background-color: #800000;
+  color: #fff;
   border: 2px solid #800000;
 }
 
 .signup-btn:hover {
-  background-color: #800000;
-  color: #fff;
+  background-color: transparent;
+  color: #800000;
   transform: scale(1.08);
 }
 
