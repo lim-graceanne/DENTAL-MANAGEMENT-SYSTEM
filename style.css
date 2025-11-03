@@ -11,7 +11,7 @@ body {
 }
 
 /* ============================= */
-/* DARK MODE TOGGLE*/
+/* DARK MODE*/
 .dark-mode {
   background-color: #121212;
   color: #f5f5f5;
@@ -68,7 +68,7 @@ body {
   position: relative;
   border-radius: 15px;
   padding: 2rem;
-  background: #1e1e1e; /* inner dark color */
+  background: #1e1e1e; 
   z-index: 1;
 }
 
@@ -86,6 +86,11 @@ body {
   mask-composite: exclude;
   pointer-events: none;
   z-index: -1;
+}
+
+.dark-mode .footer-column a:hover {
+  color: #fde95f !important; 
+  transform: translateX(5px);
 }
 
 .dark-mode header,
@@ -150,10 +155,11 @@ body {
 .logo {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
   color: #800000;
   font-weight: 700;
   font-size: clamp(1.2rem, 2vw, 1.6rem);
+  margin-left: -20px;
 }
 
 /* NAVIGATION SECTION */
@@ -171,7 +177,7 @@ html {
 .nav-links {
   display: flex;
   flex-wrap: wrap;
-  gap: clamp(10px, 3vw, 40px);
+  gap: clamp(5px, 5vw, 15px);
 }
 
 .nav-links a {
@@ -710,18 +716,18 @@ html {
   animation-play-state: paused;
 }
 
-.testimonial-card {
-  position: relative;
-  flex: 0 0 100%;
-  max-width: 100%;
-  background: #f5f3f5;
-  border-radius: 20px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-  padding: 35px 25px;
-  transition: transform 0.5s ease, opacity 0.6s ease;
-  opacity: 0.95;
-  margin: 0 20px; /* 👈 adds spacing visually */
-  box-sizing: border-box;
+.testimonial-card { 
+  position: relative; 
+  flex: 0 0 100%; 
+  max-width: 100%; 
+  background: #f5f3f5; 
+  border-radius: 20px; 
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); 
+  padding: 35px 25px; 
+  transition: transform 0.5s ease, opacity 0.6s ease; 
+  opacity: 0.95; 
+  margin: 0 20px; /* 👈 adds spacing visually */ 
+  box-sizing: border-box; 
 }
 
 .stars {
