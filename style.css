@@ -11,6 +11,128 @@ body {
 }
 
 /* ============================= */
+/* DARK MODE TOGGLE*/
+.dark-mode {
+  background-color: #121212;
+  color: #f5f5f5;
+}
+
+.dark-mode * {
+  color: #faf9f6 !important;  /*text*/
+}
+
+.dark-mode .stars {
+  color: #f5c518 !important; 
+}
+
+.dark-mode .quote-icon{
+  color: #faf9f6 !important;
+}
+
+.dark-mode .faq-section,
+.dark-mode .faq-section * {
+  color: #faf9f6 !important;   
+  background-color: #121212 !important; 
+}
+
+.dark-mode .faq-item {
+  border: 1px solid #540101 !important;
+  background-image: none; 
+}
+
+.dark-mode .contact-form {
+  position: relative;
+  border-radius: 15px;
+  padding: 2rem;
+  background: #1e1e1e; 
+  z-index: 1;
+}
+
+.dark-mode .contact-form::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 15px;
+  padding: 2px; /* border thickness */
+  background: linear-gradient(135deg, #800000, #fde95f);
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.dark-mode .card{
+  position: relative;
+  border-radius: 15px;
+  padding: 2rem;
+  background: #1e1e1e; /* inner dark color */
+  z-index: 1;
+}
+
+.dark-mode .card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 15px;
+  padding: 2px; /* border thickness */
+  background: linear-gradient(135deg,  #800000, #fde95f);
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.dark-mode header,
+.dark-mode .services-section,
+.dark-mode .features-section,
+.dark-mode .testimonials,
+.dark-mode .faq-section,
+.dark-mode .contact-section,
+.dark-mode .footer {
+  background-color: #1e1e1e;
+  color: #f5f5f5;
+}
+
+.dark-mode .service-card,
+.dark-mode .features-card,
+.dark-mode .testimonial-card,
+.dark-mode .faq-item,
+.dark-mode .contact-form,
+.dark-mode .card {
+  background: #2a2a2a;
+  color: #f5f5f5;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+}
+
+/* Dark Mode Toggle Button */
+.dark-toggle {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #800000, #fde95f);
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 22px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, background 0.5s ease;
+  z-index: 999;
+}
+
+.dark-toggle:hover {
+  transform: scale(1.1);
+}
+
+/* ============================= */
 /* FRONT Section */
 .front-section header {
   background: linear-gradient(to right, rgba(128, 0, 0, 0.6),
@@ -43,6 +165,9 @@ body {
 }
 
 /* NAVIGATION LINKS */
+html {
+  scroll-behavior: smooth;
+}
 .nav-links {
   display: flex;
   flex-wrap: wrap;
@@ -149,7 +274,7 @@ body {
   font-size: clamp(1.1rem, 2vw, 1.6rem);
   color: #800000;
   margin: 5px 0;
-  margin-top: 100px;
+  margin-top: 30px;
 
 }
 
@@ -178,7 +303,7 @@ body {
   font-size: clamp(4rem, 3vw, 2rem);
   font-weight: 700;
   color: #800000;
-  margin-top: 5px;
+  margin-top: -20px;
   margin-bottom: 20px;
 }
 
