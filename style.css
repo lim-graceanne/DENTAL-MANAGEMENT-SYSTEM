@@ -161,6 +161,11 @@ body {
   margin-left: -20px;
 }
 
+.logo a {
+  display: flex;
+  align-items: center;
+}
+
 /* NAVIGATION LINKS */
 html {
   scroll-behavior: smooth;
